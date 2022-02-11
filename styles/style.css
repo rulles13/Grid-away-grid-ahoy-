@@ -1,3 +1,5 @@
+/*---------------------------------------------Smartphone----------------------------------------------*/
+
 *{
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -78,6 +80,8 @@ body{
 .card_button:hover .line{
     opacity: 1;
 }
+
+/* try card_button::before for line 
 
 /*---------------------------------------------Tablette----------------------------------------------*/
 
