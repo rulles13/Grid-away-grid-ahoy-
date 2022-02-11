@@ -14,15 +14,15 @@
 
 body{
     background-color: var(--site-bg-color);
+    color: var(--font-color);
 }
 
 #languages{
     display: grid;
     justify-content: center;
     align-content: center;
-    grid-template-columns: repeat(4, 330px);
+    grid-template-columns: repeat(1, 330px);
     border: 2px solid green;
-    
 }  
 
 .card{
@@ -45,11 +45,6 @@ body{
 .card_tittle{
     font-size: 1.5rem;
     font-weight: 700;
-
-}
-
-.card-subtitle{
-    font-size: 1.5rem;
 }
 
 .card_description{
@@ -58,13 +53,44 @@ body{
 
 .card_button{
     display: inline-block;
+    position: relative;
     font-size: 1.2rem;
     font-weight: 700;
     height: 30px;
     border-radius: 15px;
     padding: 0 15px;
+    margin: 30px 0;
     background-color: var(--card-sec-color);
     line-height: 30px;
     vertical-align: middle;
 }
 
+.line{
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: -20px;
+    background-color: var(--font-color);
+    opacity: 0;
+    height: 3px;
+}
+
+.card_button:hover .line{
+    opacity: 1;
+}
+
+/*---------------------------------------------Tablette----------------------------------------------*/
+
+@media screen and (min-width : 400px){
+    #languages{
+        grid-template-columns: repeat(2, 330px);
+    }
+}
+
+/*---------------------------------------------Computer----------------------------------------------*/
+
+@media screen and (min-width : 1280px){
+    #languages{
+        grid-template-columns: repeat(4, 330px);
+    }
+}
